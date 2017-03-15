@@ -1713,6 +1713,11 @@
 					ctx.font = this.font;
 					ctx.textAlign = (isRotated) ? "right" : "center";
 					ctx.textBaseline = (isRotated) ? "middle" : "top";
+
+					if (this.skipXLabels) {
+						label = !(index % this.skipXLabels) ? '' : label;
+					}
+
 					ctx.fillText(label, 0, 0);
 					ctx.restore();
 				},this);
@@ -2711,6 +2716,7 @@
 				gridLineColor : (this.options.scaleShowGridLines) ? this.options.scaleGridLineColor : "rgba(0,0,0,0)",
 				padding: (this.options.showScale) ? 0 : this.options.pointDotRadius + this.options.pointDotStrokeWidth,
 				showLabels : this.options.scaleShowLabels,
+				skipXLabels: this.options.skipXLabels,
 				display : this.options.showScale
 			};
 
