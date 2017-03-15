@@ -1,8 +1,8 @@
 {
-  "name": "chart.js",
+  "name": "@provata/chart.js",
   "homepage": "http://www.chartjs.org",
   "description": "Simple HTML5 charts using the canvas element.",
-  "version": "1.0.2",
+  "version": "1.0.2-1",
   "main": "Chart.js",
   "repository": {
     "type": "git",
